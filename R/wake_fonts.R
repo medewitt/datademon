@@ -1,8 +1,9 @@
 library(tidyverse)
-library(ggthemes)
+
 
 theme_wake <- function () {
-  theme_bw(base_size=20, base_family="Avenir") %+replace%
+  library(ggthemes)
+  theme_bw(base_size=14, base_family="Avenir") %+replace%
     theme(
       panel.background  = element_blank(),
       plot.background = element_rect(fill="gray96", colour=NA),
@@ -12,7 +13,8 @@ theme_wake <- function () {
 }
 
 theme_wake_prop <- function () {
-  theme_bw(base_size=20, base_family="Palatino") %+replace%
+  library(ggthemes)
+  theme_bw(base_size=14, base_family="Palatino") %+replace%
     theme(
       panel.background  = element_blank(),
       plot.background = element_rect(fill="gray96", colour=NA),
@@ -37,7 +39,8 @@ wfu_colour_palette_primary <- c("#9E7E38", "#000000")
 # mtcars
 
 theme_wake_tufte <- function () {
-  theme_tufte(base_size=20, base_family="Avenir") %+replace%
+  library(ggthemes)
+  theme_tufte(base_size=14, base_family="Avenir") %+replace%
     theme(
       panel.background  = element_blank(),
       plot.background = element_rect(fill="gray96", colour=NA),
@@ -47,7 +50,8 @@ theme_wake_tufte <- function () {
 }
 
 theme_wake_prop_tufte <- function () {
-  theme_tufte(base_size=20, base_family="Palatino") %+replace%
+  library(ggthemes)
+  theme_tufte(base_size=14, base_family="Palatino") %+replace%
     theme(
       panel.background  = element_blank(),
       plot.background = element_rect(fill="gray96", colour=NA),
