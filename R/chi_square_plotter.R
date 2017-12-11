@@ -3,7 +3,7 @@
 #' @param x a dataframe with named rows
 #' @keywords multivariate
 #' @keywords chi_square
-#' @example
+#'
 #' chi_square_plotter()
 
 

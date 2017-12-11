@@ -15,4 +15,5 @@ Chi Square Plotter
 This function quickly plots a summarised plot for outlier detection with numeric variables
 }
 \keyword{chi_square}
+\keyword{chi_square_plotter()}
 \keyword{multivariate}

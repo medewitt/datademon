@@ -1,3 +1,11 @@
+#' Wake Fonts
+#'
+#' These functions create the Wake Forest templates and style guides for use in R
+#'
+#' @keywords fonts
+#' @keywords styleguide
+#' theme_wake()
+
 library(tidyverse)
 
 
