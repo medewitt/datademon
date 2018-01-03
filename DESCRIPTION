@@ -7,6 +7,8 @@ Maintainer: Michael E DeWitt <dewittme@wfu.edu>
 Description: This installs some of the base university branding, necessary functions
     and attempts to build connections for easy use of analytics on campus.
 License: What license is it under?
+Imports: tidyverse, 
+    scales
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.0.1
