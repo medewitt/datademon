@@ -11,18 +11,20 @@ library(tidyverse)
 
 theme_wake <- function () {
   library(ggthemes)
-  theme_bw(base_size=14, base_family="Avenir") %+replace%
+  theme_bw(base_size=11, base_family="Arial Narrow") %+replace%
     theme(
       panel.background  = element_blank(),
+      panel.grid = element_blank(),
       plot.background = element_rect(fill="gray96", colour=NA),
       legend.background = element_rect(fill="transparent", colour=NA),
-      legend.key = element_rect(fill="transparent", colour=NA)
-    )
+      legend.key = element_rect(fill="transparent", colour=NA),
+      panel.border = element_blank(), strip.background = element_blank(),
+      plot.background = element_blank(), complete = TRUE)
 }
 
 theme_wake_prop <- function () {
   library(ggthemes)
-  theme_bw(base_size=14, base_family="Palatino") %+replace%
+  theme_bw(base_size=11, base_family="Arial Narrow") %+replace%
     theme(
       panel.background  = element_blank(),
       plot.background = element_rect(fill="gray96", colour=NA),
