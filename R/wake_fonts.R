@@ -52,7 +52,7 @@
 #'        title="Seminal ggplot2 scatterplot example",
 #'        subtitle="A plot that is only useful for demonstration purposes",
 #'        caption="Brought to you by the letter 'g'") +
-#'   theme_ipsum()
+#'   theme_wake()
 #'
 #' # seminal bar chart
 #'
@@ -66,7 +66,7 @@
 #'        title="Seminal ggplot2 bar chart example",
 #'        subtitle="A plot that is only useful for demonstration purposes",
 #'        caption="Brought to you by the letter 'g'") +
-#'   theme_ipsum(grid="Y") +
+#'   theme_wake(grid="Y") +
 #'   theme(axis.text.y=element_blank())
 #' }
 theme_wake <- function(base_family="Arial Narrow", base_size = 11.5,
