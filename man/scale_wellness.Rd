@@ -4,7 +4,7 @@
 \alias{scale_colour_wellness}
 \alias{scale_color_wellness}
 \alias{scale_fill_wellness}
-\title{Discrete color & fill scales based on the ipsum palette}
+\title{Discrete color & fill scales based on the wellness palette}
 \usage{
 scale_colour_wellness(...)
 

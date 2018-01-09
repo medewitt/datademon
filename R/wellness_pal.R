@@ -1,3 +1,9 @@
+devtools::use_package("ggplot2")
+devtools::use_package("extrafont")
+devtools::use_package("scales")
+devtools::use_package("RColorBrewer")
+devtools::use_package("dplyr")
+
 library(RColorBrewer)
 wellness_palette <- RColorBrewer::brewer.pal(name = "BuPu", n = 7)
 #' Wake Forest Branded Color Pallete
@@ -9,7 +15,7 @@ wellness_palette <- RColorBrewer::brewer.pal(name = "BuPu", n = 7)
 wellness_pal <- function(){ scales::manual_pal(wellness_palette)}
 
 
-#' Discrete color & fill scales based on the ipsum palette
+#' Discrete color & fill scales based on the wellness palette
 #'
 #' See [wellness_pal]().
 #'

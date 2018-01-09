@@ -42,33 +42,36 @@
 #' @param ticks ticks if `TRUE` add ticks
 #' @export
 #' @examples \dontrun{
-#' library(ggplot2)
-#' library(dplyr)
-#'
-#' # seminal scatterplot
-#' ggplot(mtcars, aes(mpg, wt)) +
-#'   geom_point() +
-#'   labs(x="Fuel effiiency (mpg)", y="Weight (tons)",
-#'        title="Seminal ggplot2 scatterplot example",
-#'        subtitle="A plot that is only useful for demonstration purposes",
-#'        caption="Brought to you by the letter 'g'") +
-#'   theme_wake()
-#'
-#' # seminal bar chart
-#'
-#' update_geom_font_defaults()
-#'
-#' count(mpg, class) %>%
-#'   ggplot(aes(class, n)) +
-#'   geom_col() +
-#'   geom_text(aes(label=n), nudge_y=3) +
-#'   labs(x="Fuel efficiency (mpg)", y="Weight (tons)",
-#'        title="Seminal ggplot2 bar chart example",
-#'        subtitle="A plot that is only useful for demonstration purposes",
-#'        caption="Brought to you by the letter 'g'") +
-#'   theme_wake(grid="Y") +
-#'   theme(axis.text.y=element_blank())
-#' }
+# library(ggplot2)
+# library(dplyr)
+#
+# # seminal scatterplot
+# ggplot(mtcars, aes(mpg, wt)) +
+#   geom_point() +
+#   labs(x="Fuel effiiency (mpg)", y="Weight (tons)",
+#        title="Seminal ggplot2 scatterplot example",
+#        subtitle="A plot that is only useful for demonstration purposes",
+#        caption="Brought to you by the letter 'g'") +
+#   theme_wake()
+#
+# # seminal bar chart
+#
+# update_geom_font_defaults()
+#
+# count(mpg, class) %>%
+#   ggplot(aes(class, n)) +
+#   geom_col() +
+#   geom_text(aes(label=n), nudge_y=3) +
+#   labs(x="Fuel efficiency (mpg)", y="Weight (tons)",
+#        title="Seminal ggplot2 bar chart example",
+#        subtitle="A plot that is only useful for demonstration purposes",
+#        caption="Brought to you by the letter 'g'") +
+#   theme_wake(grid="Y") +
+#   theme(axis.text.y=element_blank())
+# }
+
+windowsFonts(ArialNarrow=windowsFont("Arial-Narrow"))
+
 theme_wake <- function(base_family="Arial Narrow", base_size = 11.5,
                         plot_title_family=base_family, plot_title_size = 18,
                         plot_title_face="bold", plot_title_margin = 10,
@@ -189,3 +192,7 @@ update_geom_font_defaults <- function(family="Arial Narrow", face="plain", size=
 #' @format length 1 character vector
 #' @export
 font_an <- "Arial Narrow"
+
+library(extrafont)
+font_import()
+loadfonts()
