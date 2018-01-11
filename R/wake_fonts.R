@@ -44,15 +44,16 @@
 #' @examples \dontrun{
 # library(ggplot2)
 # library(dplyr)
-#
-# # seminal scatterplot
-# ggplot(mtcars, aes(mpg, wt)) +
+
+# seminal scatterplot
+# ggplot(mtcars, aes(mpg, wt, group = as.factor(cyl), color = as.factor(cyl))) +
 #   geom_point() +
 #   labs(x="Fuel effiiency (mpg)", y="Weight (tons)",
 #        title="Seminal ggplot2 scatterplot example",
 #        subtitle="A plot that is only useful for demonstration purposes",
 #        caption="Brought to you by the letter 'g'") +
-#   theme_wake()
+#   theme_wake()+
+#   scale_color_wake()
 #
 # # seminal bar chart
 #
