@@ -2,18 +2,13 @@
 % Please edit documentation in R/chi_square_plotter.R
 \name{chi_square_plotter}
 \alias{chi_square_plotter}
-\title{Chi Square Plotter
-This function quickly plots a summarised plot for outlier detection with numeric variables}
+\title{Chi Square Plotter}
 \usage{
-chi_square_plotter(x)
+chi_square_plotter(input_df)
 }
 \arguments{
-\item{x}{a dataframe with named rows}
+\item{input_df}{a dataframe with named rows}
 }
 \description{
 Chi Square Plotter
-This function quickly plots a summarised plot for outlier detection with numeric variables
 }
-\keyword{chi_square}
-\keyword{chi_square_plotter()}
-\keyword{multivariate}

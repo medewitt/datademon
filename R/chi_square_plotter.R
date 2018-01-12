@@ -1,25 +1,27 @@
 #' Chi Square Plotter
+#' @md
 #' This function quickly plots a summarised plot for outlier detection with numeric variables
-#' @param x a dataframe with named rows
-#' @keywords multivariate
-#' @keywords chi_square
+#' @param  input_df a dataframe with named rows
 #'
-#' chi_square_plotter()
+#' @export
+#' @rdname chi_square_plotter
 
 
-chi_square_plotter <- function(x){
+chi_square_plotter <- function(input_df){
 
-  numeric_vars <- apply(x, 2, is.numeric)
+  numeric_vars <- apply(input_df, 2, is.numeric)
 
-  x <- x[,numeric_vars]
+  input_df <- input_df[,numeric_vars]
 
-  cm <- colMeans(x)
+  cm <- colMeans(input_df)
 
-  S <- cov(x)
+  S <- cov(input_df)
 
-  d <- apply(x, 1, function(x) {t(x - cm) %*% solve(S) %*% (x-cm)})
+  solver <- function(x) {t(x - cm) %*% solve(S) %*% (x-cm)}
 
-  plot(qc <-qchisq((1:nrow(x) -1/2)/nrow(x), df = 6),
+  d <- apply(input_df, 1, solver)
+
+  plot(qc <-qchisq((1:nrow(input_df) -1/2)/nrow(input_df), df = 6),
        sd <- sort(d),
        xlab = expression(paste(chi[6]^2), "quantile"),
        ylab = "Ordered Distances", xlim = range(qc)*c(1,1.1))

@@ -193,16 +193,16 @@ update_geom_font_defaults <- function(family="Arial Narrow", face="plain", size=
 #' @export
 font_an <- "Arial Narrow"
 
-attach(mtcars)
-library(tidyverse)
-library(RColorBrewer)
-count(mpg, class) %>%
-  ggplot(aes(as.factor(class), n, fill = as.factor(class))) +
-  geom_col() +
-  geom_text(aes(label=n), nudge_y=3) +
-  labs(x="Fuel efficiency (mpg)", y="Weight (tons)",
-       title="Seminal ggplot2 bar chart example") +
-  theme_wellbeing(grid="Y") +
-  theme(axis.text.y=element_blank())+
-  ylab("")+
-  xlab("")
+# attach(mtcars)
+# library(tidyverse)
+# library(RColorBrewer)
+# count(mpg, class) %>%
+#   ggplot(aes(as.factor(class), n, fill = as.factor(class))) +
+#   geom_col() +
+#   geom_text(aes(label=n), nudge_y=3) +
+#   labs(x="Fuel efficiency (mpg)", y="Weight (tons)",
+#        title="Seminal ggplot2 bar chart example") +
+#   theme_wellbeing(grid="Y") +
+#   theme(axis.text.y=element_blank())+
+#   ylab("")+
+#   xlab("")

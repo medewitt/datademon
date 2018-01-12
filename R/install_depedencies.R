@@ -1,13 +1,12 @@
-
 #' Install Dependent Packages
-#'
+#' @md
 #' @param pkg.dir refers to the package directory that contains the
 #'     \code{Description} file
 #' @param dependencies defines which dependencies of the dependent packages are
 #'     to be installed
 #' @param repos is the (CRAN) repository used to install dependencies
 #' @param lib is the library to which packages are installed
-install_dep = function(pkg.dir = ".", dependencies = TRUE, repos = getOption("repos")[1], lib = .libPaths()[1]) {
+install_dep <- function(pkg.dir = ".", dependencies = TRUE, repos = getOption("repos")[1], lib = .libPaths()[1]) {
 
   # default dependencies
   if(dependencies == TRUE) {
