@@ -166,7 +166,7 @@ theme_wellbeing <- function(base_family="Arial Narrow", base_size = 11.5,
                                                family=caption_family, face=caption_face))
   ret <- ret + theme(plot.margin=plot_margin)
 
-  ret <- ret + theme(axis.text.x = element_text(colour="grey20",size=8,angle=30,hjust=.9,vjust=.9,face="plain"),
+  ret <- ret + theme(axis.text.x = element_text(colour="grey20",size=8,face="plain"),
                      plot.title = element_text(size=10),legend.position = "none")
 
   ret
