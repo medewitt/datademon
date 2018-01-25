@@ -166,6 +166,18 @@ theme_wake <- function(base_family="Arial Narrow", base_size = 11.5,
                                                family=caption_family, face=caption_face))
   ret <- ret + theme(plot.margin=plot_margin)
 
+  ret <-  ret + theme(axis.text = element_text(size = 14))
+
+  ret <- ret + theme(
+      rect = element_rect(
+        fill = rgb(240, 240, 240, max = 255),
+        linetype = 0,
+        colour = NA
+      ),
+      panel.grid = element_line(colour = NULL),
+      panel.background = element_rect(rgb(240, 240, 240, max = 255))
+    )
+
   ret
 
 }
