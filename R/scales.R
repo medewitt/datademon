@@ -54,6 +54,16 @@ scale_x_percent <- function (name = waiver(), breaks = waiver(), minor_breaks = 
                              labels = scales::percent, limits = NULL, expand = c(0.01,0), oob = censor,
                              na.value = NA_real_, trans = "identity", position = "bottom",
                              sec.axis = waiver()) {
+
+  if (!requireNamespace("scales", quietly = TRUE)) {
+    stop("Pkg needed for this function to work. Please install it.",
+         call. = FALSE)
+  }
+
+  if (!requireNamespace("ggplot2", quietly = TRUE)) {
+    stop("Pkg needed for this function to work. Please install it.",
+         call. = FALSE)
+  }
   sc <- ggplot2::continuous_scale(c("x", "xmin", "xmax", "xend", "xintercept",
                                     "xmin_final", "xmax_final", "xlower", "xmiddle", "xupper"),
                                   "position_c", identity, name = name, breaks = breaks,
