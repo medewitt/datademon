@@ -6,7 +6,7 @@ Author: Michael E DeWitt (IR/Data Science)
 Maintainer: Michael E DeWitt <dewittme@wfu.edu>
 Description: This installs some of the base university branding, necessary functions
     and attempts to build connections for easy use of analytics on campus.
-License: What license is it under?
+License: MIT + file LICENSE
 Imports: tidyverse, 
     scales,
     ggplot2,
