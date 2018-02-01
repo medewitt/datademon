@@ -146,3 +146,24 @@ scale_y_comma <- function (name = waiver(), breaks = waiver(), minor_breaks = wa
   }
   sc
 }
+
+#'@export
+scale_x_likert_six <- function(name = waiver(), breaks = waiver(), minor_breaks = waiver(),
+                                expand = c(0.01,0), oob = censor,
+                                na.value = NA_real_, trans = "identity", position = "bottom",
+                                sec.axis = waiver()){
+
+  sc <-
+    ggplot2::scale_x_discrete(
+      limit = c("1", "2", "3", "4", "5", "6"),
+      labels = c(
+        "Strongly \n Agree",
+        "Agree",
+        "Slightly\n Agree",
+        "Slightly\n Disagree",
+        "Disagree",
+        "Strongly\n Disagree"
+      ),
+      position = position
+    )
+}
