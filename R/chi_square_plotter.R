@@ -9,9 +9,9 @@
 
 chi_square_plotter <- function(input_df){
 
-  numeric_vars <- apply(input_df, 2, is.numeric)
+  numeric_vars <- as.matrix(dplyr::select_if(input_df, is.numeric))
 
-  input_df <- input_df[,numeric_vars]
+  input_df <- numeric_vars
 
   cm <- colMeans(input_df)
 
@@ -25,6 +25,7 @@ chi_square_plotter <- function(input_df){
        sd <- sort(d),
        xlab = expression(paste(chi[6]^2), "quantile"),
        ylab = "Ordered Distances", xlim = range(qc)*c(1,1.1))
+
   oups <-which(rank(abs(qc - sd), ties = "random") > nrow(x) -3)
   text(qc[oups], sd[oups] - 1.5, names(oups))
   abline(a = 0, b = 1)
