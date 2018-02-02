@@ -7,12 +7,14 @@ Maintainer: Michael E DeWitt <dewittme@wfu.edu>
 Description: This installs some of the base university branding, necessary functions
     and attempts to build connections for easy use of analytics on campus.
 License: MIT + file LICENSE
-Imports: tidyverse, 
+Imports: 
+    tidyverse,
     scales,
     ggplot2,
     extrafont,
     RColorBrewer,
-    dplyr
+    dplyr,
+    purrr
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.0.1
