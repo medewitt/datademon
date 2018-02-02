@@ -12,3 +12,9 @@ make_survey_key(survey)
 \description{
 This is a function that can be used to extract information from a survey item created by the qualtrics API
 }
+\examples{
+
+#mysurvey <- getSurvey(surveyID = surveys$id[1], verbose = TRUE)
+#survey_key <- make_survey_key(mysurvey)
+
+}

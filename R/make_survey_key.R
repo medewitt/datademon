@@ -5,7 +5,7 @@
 #'
 #' @param survey a list item that has been created from the qualtrics API
 #'
-#' @example
+#' @examples
 #'
 #' #mysurvey <- getSurvey(surveyID = surveys$id[1], verbose = TRUE)
 #' #survey_key <- make_survey_key(mysurvey)
