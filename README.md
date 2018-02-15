@@ -37,6 +37,8 @@ library(datademon)
 library(ggplot2)
 library(extrafont)
 #> Registering fonts with R
+library(rlang)
+suppressPackageStartupMessages(library(tidyverse))
 
 ggplot(diamonds, aes(carat, price, group = color, color = color))+
   geom_point()+
@@ -49,6 +51,7 @@ ggplot(diamonds, aes(carat, price, group = color, color = color))+
 ### Application of the Wellbeing Survey Template
 
 ``` r
+library(extrafont)
 ggplot(diamonds, aes(carat, price, group = color, color = color))+
   geom_point()+
   scale_colour_wellness()+
@@ -58,6 +61,19 @@ ggplot(diamonds, aes(carat, price, group = color, color = color))+
 <img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />
 
 ### Application of Likert Six Scale
+
+``` r
+datademon::update_geom_font_defaults()
+make_wellbeing_charts(data = survey_sample, "ACAENG_ACAENG_1", likert_scale = "agreement")+ylab("")+xlab("")
+```
+
+<img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" />
+
+``` r
+make_wellbeing_charts(data = survey_sample, "ACTIVITIES_1_9", likert_scale = "frequency")
+```
+
+<img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
 
 ### Application of
 
