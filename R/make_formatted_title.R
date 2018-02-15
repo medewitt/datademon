@@ -14,7 +14,6 @@ make_formatted_title <-function(title, character_width = 20){
     paste0(x, collapse = "\n")
   }
   titles <-stringr::str_wrap(title, character_width)
-  new_titles <- sapply(titles, my_paste)
-  return(new_titles)
+  return(titles)
 }
 
