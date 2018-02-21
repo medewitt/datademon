@@ -20,7 +20,8 @@ visual_predictive_power_time <- function(df, group, predictor, outcome){
     group_by(!!group.) %>%
     nest() %>%
     mutate(model = purrr::map(data, ~broom::tidy(glm(as.formula(f),
-                                                     data = ., family = "binomial"))[2,])) %>%
+                                                     data = ., family = "binomial",
+                                                     control = list(maxit = 100)))[2,])) %>%
     unnest(model) %>%
     arrange(!!group.) %>%
     ggplot(aes(year, estimate))+
