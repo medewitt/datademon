@@ -31,7 +31,7 @@ my_es <- function(df){
     es_sigma <- sqrt((ly + lx) / (lx + ly) + es^2/(2 * (lx + ly)))
     es_ci <- es_sigma * 1.96
 
-    statz <- rbind(es, ci)
+    statz <- rbind(es, es_sigma, es_ci)
 
     out<- rbind(out, statz)
   }
