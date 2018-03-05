@@ -26,17 +26,24 @@ my_es <- function(df){
     csd <- csd / (lx + ly)
     csd <- sqrt(csd)
     cd <- med / csd
-    out[i]<- cd
+
+    es <- cd
+    es_sigma <- sqrt((ly + lx) / (lx + ly) + es^2/(2 * (lx + ly)))
+    es_ci <- es_sigma * 1.96
+
+    statz <- rbind(es, ci)
+
+    out<- rbind(out, statz)
   }
 
   out <- out%>%
     as.data.frame() %>%
     mutate(effect_size = case_when(
-      out >2~"Huge",
-      out > 1.2~ "Very large",
-      out > 0.8~"Large",
-      out > 0.5~"Medium",
-      out > 0.2~"Small",
+      es >2~"Huge",
+      es > 1.2~ "Very large",
+      es > 0.8~"Large",
+      es > 0.5~"Medium",
+      es > 0.2~"Small",
       TRUE~"Very Small"
     )) %>%
     add_column(.,keys)
