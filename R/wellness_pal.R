@@ -5,7 +5,7 @@ devtools::use_package("RColorBrewer")
 devtools::use_package("dplyr")
 
 library(RColorBrewer)
-wellness_palette <- RColorBrewer::brewer.pal(name = "BuPu", n = 7)
+wellness_palette <- RColorBrewer::brewer.pal(name = "BuPu", n = 8)[2:8]
 #' Wake Forest Branded Color Pallete
 #' @export
 #' @example

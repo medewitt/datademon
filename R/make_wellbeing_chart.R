@@ -33,6 +33,7 @@ make_wellbeing_charts <- function(data, mygroup, likert_scale) {
   ggplot(a,aes(response_fact, perc_no_na, fill = response_fact))+
     geom_col()+
     theme_wellbeing()+
+    theme(panel.grid.major.x = element_blank(), panel.grid.minor.x = element_blank())+
     scale_fill_wellness()+
     ggtitle(paste0(my_title))+
     geom_text(aes(label = paste0(round(perc_no_na,1),"%")), nudge_y=3)

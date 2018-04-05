@@ -1,4 +1,4 @@
-#' @title My Effect Size Calculation
+#' @title My Effect Size Calculation Two
 #' @description A simple tool to calculate pairwise effect sizes
 #'   It takes the dataframe that has already been gathered (using tidyr)
 #'   and summarised into variables that include mu(mean), var(variance) and
@@ -10,7 +10,7 @@
 #'
 #' @export
 
-my_es <- function(df){
+my_es_2 <- function(df){
   keys <- unique(df$key)
 
   out <- c()
@@ -33,7 +33,7 @@ my_es <- function(df){
 
     statz <- cbind(es = es, es_sigma = es_sigma, es_ci = es_ci)
 
-    out<- rbind(out, statz)
+    out<- cbind(out, statz)
   }
 
   out <- out%>%
