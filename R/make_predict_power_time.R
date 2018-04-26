@@ -24,7 +24,7 @@ visual_predictive_power_time <- function(df, group, predictor, outcome){
                                                      control = list(maxit = 100)))[2,])) %>%
     unnest(model) %>%
     arrange(!!group.) %>%
-    ggplot(aes(!!group., estimate))+
+    ggplot2::ggplot(aes(!!group., estimate))+
     geom_errorbar(aes(ymin=estimate-std.error, ymax=estimate+std.error), width=.1)+
     geom_point(size=5)+
     geom_hline(yintercept = 0, color = "red", alpha = 0.5)+
