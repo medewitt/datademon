@@ -2,7 +2,6 @@
 % Please edit documentation in R/theme_wake.R, R/theme_wellness.R
 \name{update_geom_font_defaults}
 \alias{update_geom_font_defaults}
-\alias{update_geom_font_defaults}
 \title{Update matching font defaults for text geoms}
 \usage{
 update_geom_font_defaults(family = "Arial Narrow", face = "plain",

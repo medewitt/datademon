@@ -11,6 +11,9 @@ make_wellbeing_charts(data, mygroup, likert_scale)
 
 \item{likert_scale}{the Likert Scale to Use ("agreement", "frequency", "satisfaction")}
 }
+\description{
+MAke Wellbeing Likert Chart
+}
 \details{
 The purpose of this function to faciliate making charts quickly
 it utilizes the stock likert scales that are used in the wellbeing survey

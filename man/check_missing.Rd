@@ -9,3 +9,6 @@ check_missing(df)
 \arguments{
 \item{df}{a data frame to inspect}
 }
+\description{
+check missing
+}

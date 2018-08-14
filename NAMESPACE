@@ -3,6 +3,7 @@
 export()
 export(check_missing)
 export(chi_square_plotter)
+export(compare_chi_square)
 export(font_an)
 export(grayplot_na)
 export(make_formatted_title)

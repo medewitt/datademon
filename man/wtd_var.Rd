@@ -12,3 +12,6 @@ wtd_var(x, weights = NULL, normwt = FALSE, na.rm = TRUE,
 
 \item{weights}{the weights}
 }
+\description{
+weighted variance from Hmisc
+}

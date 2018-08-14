@@ -11,6 +11,9 @@ make_formatted_title(title, character_width = 20)
 
 \item{character_width}{how many characters do you want each line to be maximum}
 }
+\description{
+ggplot2 Title Break Make
+}
 \examples{
 a <- "A really long title for a graph that will probably not fit but we need to write it all"
 
