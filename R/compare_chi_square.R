@@ -9,7 +9,7 @@
 
 compare_chi_square <- function(df, group_1, response){
 
-  df<-df_red
+  df<-df
 
   p <- broom::tidy(chisq.test(df[[response]], df[[group_1]]))$p.value
 
